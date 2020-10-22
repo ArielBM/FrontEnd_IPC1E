@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        /* Create two equal columns that floats next to each other */
+        
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            text-align: center;
+            /* Should be removed. Only for demonstration */
+        }
+        /* Clear floats after the columns */
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio</title>
+    <!-- Bootstrap Styles-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- Custom Styles-->
+    <link href="assets/css/custom-styles.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
+
+
+
+
+    <!-- AGREGAR JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+    <!-- OBTENER POKEMON
+    <script>
+        $("document").ready(function() {
+            window.alert("Bienvenido " + sessionStorage.getItem('nombre_usuario'));
+
+            $.get("http://localhost:5000/user", function(data) {
+
+                var mis_pokemon = JSON.parse(data)
+
+                mis_pokemon.forEach(pokemon => {
+
+                    $('#pokemonCards').append(`
+                                                <div class="col-md-4 col-sm-4">
+                                                    <div class="panel panel-info">
+                                                        <div class="panel-heading">
+                                                            ID: ` + pokemon['id'] + `
+                                                        </div>
+                                                        <div style="text-align: center;" class="panel-body">
+                                                            <img style="margin: auto;" src= ` + pokemon['foto'] + ` height="200">
+                                                        </div>
+                                                        <div class="panel-footer">
+                                                            ` + pokemon['nombre'] + `
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            `)
+
+
+                });
+
+
+                //console.log(JSON.parse(data));
+            });
+
+        });
+    </script> -->
+
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header" style="margin-bottom: 2%;">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="principal.html">Pokémon Center 2</a>
+                <br>
+            </div>
+
+
+        </nav>
+        <!--/. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                    <li>
+                        <a class="active-menu" href="principal.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            Pokedex <small>Catálogo de Pokémon.</small>
+                        </h1>
+                    </div>
+                </div>
+                <!-- /. ROW  -->
+
+
+                <!-- /. ROW  -->
+                <div id='pokemonCards' class="row">
+
+
+
+                </div>
+
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!-- Bootstrap Js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Js -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+    <!-- Custom Js -->
+    <script src="assets/js/custom-scripts.js"></script>
+
+
+
+
+</body>
+
+</html>
