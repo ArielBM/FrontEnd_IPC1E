@@ -109,7 +109,7 @@
             const urlParams = new URLSearchParams(queryString);
             const id = urlParams.get('id')
 
-            fetch('http://localhost:5000/obtener-pokemon?id=' + id, {
+            fetch('https://start-whit-flask.herokuapp.com/obtener-pokemon?id=' + id, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json'

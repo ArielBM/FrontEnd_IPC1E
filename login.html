@@ -92,7 +92,7 @@
                 var $form = $(this),
                     user_name = $form.find("input[name='user_name']").val(),
                     user_pass = $form.find("input[name='user_pass']").val(),
-                    url = 'http://localhost:5000/login';
+                    url = 'https://start-whit-flask.herokuapp.com/login';
 
                 var posting = $.post(url, {
                     nombre_usuario: user_name,
@@ -111,13 +111,6 @@
                     } else {
                         window.alert("Login Incorrecto")
                     }
-
-                    $.get("http://localhost:5000/pokemon", function(data) {
-
-                        var mis_pokemon = JSON.parse(data)
-                        console.log(mis_pokemon)
-
-                    })
 
 
                 });
