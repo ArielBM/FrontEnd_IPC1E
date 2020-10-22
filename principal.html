@@ -96,7 +96,7 @@
                     var mis_pokemon = response;
                     var poke_cards = document.querySelector('#pokemonCards')
 
-                    mis_pokemon.slice(0, 10).forEach(pokemon => {
+                    mis_pokemon.forEach(pokemon => {
 
                         poke_cards.innerHTML += `<a href="poke_page.html?id=${pokemon['id']}"><div class="col-md-4 col-sm-4">
                                                     <div class="panel panel-info">
